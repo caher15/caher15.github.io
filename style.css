@@ -1,0 +1,107 @@
+* {
+    transition: all 0.25s;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  html{
+    font-family: 'Bevellier', sans-serif;
+    font-size: 52.5%;
+  }
+  
+  body {
+    /* background-color: #FBE4D8; */
+    background-color: #f3d2c1;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    
+  }
+  #tablero-de-juego{
+    width: 90%;
+  }
+  
+  #encabezado {
+    width: auto;
+    min-height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: white;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 10px;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #001858;
+  }
+  
+  .opcion {
+    text-align: center;
+    /* width: 70vw; */
+    background: #fef6e4;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 1.9rem;
+    font-weight: 400;
+  }
+  
+  .opcion:hover{
+       background: lightgray;
+  }
+  button{
+    font-family: 'Bevellier', sans-serif;
+    font-weight: 600;
+    font-size: 1.9rem;
+    align-items: center;
+	justify-content: center;
+	width: auto;
+	height: auto;
+	background: #141414;
+	color: #fff;
+	border: none;
+	cursor: pointer;
+	transition: .3s ease all;
+	border-radius: 5px;
+	position: relative;
+	overflow: hidden;
+  }
+  /*Estilo boton Ayuda */
+  .boton2{
+    padding: 5px;
+    background: none;
+    color:  #001858;
+ }
+ .boton2 svg{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    fill: none;
+ }
+
+ .boton2 rect{
+    width: 100%;
+    height: 100%;
+    stroke: #001858;
+    stroke-width: 5px;
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    transition: 1.5s ease all;
+ }
+
+ .boton2:hover rect{
+    stroke-dashoffset: 0;
+ }
+ .swal2-popup {
+    font-size: 1.8rem !important;
+    
+  }
