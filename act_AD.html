@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://api.fontshare.com/v2/css?f[]=bevellier@500,600,400&display=swap" rel="stylesheet">
+    <script src="base-de.preguntas.AD.js"></script>
+    <script defer src="act_AD.js" ></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.3.0/dist/sweetalert2.all.min.js"></script>
+    <title>Juego de preguntas</title>
+</head>
+<style>
+    *
+</style> 
+    <body>
+    <div id="tablero-de-juego">
+
+        <div id="encabezado">
+
+            
+            <button id="ayuda" class="boton2" onclick="ayuda()">
+                <span>Ayuda</span>
+                    <svg>
+                    <rect x="0" y="0" fill="none"></rect>
+                        </svg>
+            </button>
+
+        <br>
+
+            <span id="pregunta">Aquí va la pregunta</span>
+        <br>
+
+            <img id="imagen" src="" style="width: 90%;height: 200px;object-fit: contain;">
+        </div>
+
+        <div class="opcion" id="opcion-1" onclick="seleccionarOpcion(0)">
+            Opción 1
+        </div>
+        <div class="opcion" id="opcion-2" onclick="seleccionarOpcion(1)">
+             Opción 2
+        </div>
+        <div class="opcion" id="opcion-3" onclick="seleccionarOpcion(2)">
+             Opción 3
+        </div>
+        <div class="opcion" id="opcion-4" onclick="seleccionarOpcion(3)">
+            Opción 4
+        </div>
+
+    </div>
+</body>
+</html>
