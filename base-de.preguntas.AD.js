@@ -3,7 +3,7 @@ let basePreguntas = [
     {
         pregunta: "La siguiente imagen es la representación de una señal...",
         ayuda: "Los sonidos que escuchamos en la música, la radio, la televisión y las conversaciones telefónicas se transmiten en forma de esta señal",
-        //imagen: "./img-act_AD/Analoga.png",
+        imagen: "https://images.pexels.com/photos/53514/street-lamp-lantern-afterglow-light-53514.jpeg",
         respuesta: "Análoga",
         distractores:["Digital", "Radio", "Oblicua"],
     

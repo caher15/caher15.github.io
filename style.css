@@ -8,14 +8,65 @@
     font-family: 'Bevellier', sans-serif;
     font-size: 52.5%;
   }
-  
+  header {
+    position: absolute; 
+    top: 3%;
+    height: 100px;      
+    width: 100%;
+
+ 
+  }
+   header div{
+    position: absolute;  
+    top: 50%;            
+    left: 50%;           
+    transform: translate(-50%, -50%); 
+    background-color: white; 
+    padding: 20px;       
+    width: 300px;        
+    text-align: center;  
+    border: 1px solid #ccc;
+    border-radius: 10px;
+
+   }
+   .titulo h1{
+    position: relative;
+    font-weight: bold;
+    font-size: 4rem;
+    overflow: hidden;
+   }
+   .titulo h1::before{
+    content: "";
+    position: absolute;
+    left: 120%;
+    width: 120%;
+    height: 100%;
+    background: linear-gradient(98deg, transparent 0%, white 5%, white 100%);
+    animation: animate 10s linear infinite;
+   }
+   @keyframes animate {
+    0% {
+        left: -20%;
+    }
+
+    50% {
+        left: 120%;
+    }
+
+    100% {
+        left: -20%;
+    }
+}
+
   body {
     /* background-color: #FBE4D8; */
-    background-color: #f3d2c1;
+    /*background-color: #f3d2c1; */
+    background: linear-gradient(228deg, #012891 11.19%, #4eb1c8 100%);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
     display: flex;
+    
     justify-content: center;
     align-items: center;
     min-height: 100vh;
@@ -23,6 +74,7 @@
   }
   #tablero-de-juego{
     width: 90%;
+    padding-top: 20px;
   }
   
   #encabezado {
@@ -36,7 +88,7 @@
     border-radius: 10px;
     margin: 10px;
     padding: 10px;
-    font-size: 1.8rem;
+    font-size: 2.4rem;
     font-weight: 600;
     color: #001858;
   }
@@ -49,7 +101,7 @@
     margin: 10px;
     padding: 10px;
     cursor: pointer;
-    font-size: 1.9rem;
+    font-size: 2.1rem;
     font-weight: 400;
   }
   
@@ -59,7 +111,7 @@
   button{
     font-family: 'Bevellier', sans-serif;
     font-weight: 600;
-    font-size: 1.9rem;
+    font-size: 1.7rem;
     align-items: center;
 	justify-content: center;
 	width: auto;
@@ -78,6 +130,7 @@
     padding: 5px;
     background: none;
     color:  #001858;
+    font-size: 2rem;
  }
  .boton2 svg{
     width: 100%;
