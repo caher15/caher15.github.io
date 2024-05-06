@@ -90,7 +90,7 @@ async function seleccionarOpcion(index){
         puntajebd = puntaje/basePreguntas.length;
         //sessionStorage.setItem('puntaje', puntajebd.toString());
         sessionStorage.setItem('puntaje', parseFloat(puntajebd));
-        window.location.href= 'hola.php?puntaje3='+ puntajebd;
+        window.location.href= 'index.html';
         sessionStorage.removeItem('puntaje');
         
 
