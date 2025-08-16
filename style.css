@@ -13,6 +13,17 @@ body {
     background-image: url('/assets/img/fondo.jpg'); /* Foto principal */
     background-size: cover;
     background-position: center;
+    animation: fadeIn 3s ease;
+}
+@keyframes fadeIn{
+    0% {
+        opacity: 0;
+        filter: blur(20px);
+    }
+    10% {
+        opacity: 1;
+        filter: brightness(2) blur(10px);
+    }
 }
 .overlay {
     position: absolute;
@@ -237,12 +248,28 @@ body {
     width: 100%;
     display: block;
 }
+@media screen and (min-width: 375px) {
+    .parents > div:first-child {
+    position: relative;
+    padding-right: 57px;
+}
+}  
+@media screen and (min-width: 412px) {
+    .parents > div:first-child {
+    position: relative;
+    padding-right: 70px;
+    }   
+    .date-title {
+    margin-top: 75px;
+    }
+
+
+}  
 @media screen and (min-width: 425px) {
     .parents > div:first-child {
     position: relative;
     padding-right: 67px;
 }
-    
 }
 @media screen and (min-width: 768px) {
     .parents > div:first-child::after {
