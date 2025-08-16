@@ -1,160 +1,252 @@
-* {
-    transition: all 0.25s;
-    box-sizing: border-box;
+body {
     margin: 0;
-    padding: 0;
-  }
-  html{
-    font-family: 'Bevellier', sans-serif;
-    font-size: 52.5%;
-  }
-  header {
-    position: absolute; 
-    top: 3%;
-    height: 100px;      
-    width: 100%;
-
- 
-  }
-   header div{
-    position: absolute;  
-    top: 50%;            
-    left: 50%;           
-    transform: translate(-50%, -50%); 
-    background-color: white; 
-    padding: 20px;       
-    width: 300px;        
-    text-align: center;  
-    border: 1px solid #ccc;
-    border-radius: 10px;
-
-   }
-   .titulo h1{
-    position: relative;
-    font-weight: bold;
-    font-size: 4rem;
-    overflow: hidden;
-   }
-   .titulo h1::before{
-    content: "";
-    position: absolute;
-    left: 120%;
-    width: 120%;
-    height: 100%;
-    background: linear-gradient(98deg, transparent 0%, white 5%, white 100%);
-    animation: animate 10s linear infinite;
-   }
-   @keyframes animate {
-    0% {
-        left: -20%;
-    }
-
-    50% {
-        left: 120%;
-    }
-
-    100% {
-        left: -20%;
-    }
+    font-family: 'Nunito', sans-serif;
+    background-color: #e8ece6;
+    color: #333;
 }
 
-  body {
-    /* background-color: #FBE4D8; */
-    /*background-color: #f3d2c1; */
-    background: linear-gradient(228deg, #012891 11.19%, #4eb1c8 100%);
-    background-repeat: no-repeat;
+/* ======== SECCIÓN PRINCIPAL (Foto + Logo) ======== */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: url('/assets/img/fondo.jpg'); /* Foto principal */
     background-size: cover;
-    background-position: center center;
-    display: flex;
-    
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    
-  }
-  #tablero-de-juego{
-    width: 90%;
-    padding-top: 20px;
-  }
-  
-  #encabezado {
-    width: auto;
-    min-height: 200px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    background: white;
-    border-radius: 10px;
-    margin: 10px;
-    padding: 10px;
-    font-size: 2.4rem;
-    font-weight: 600;
-    color: #001858;
-  }
-  
-  .opcion {
-    text-align: center;
-    /* width: 70vw; */
-    background: #fef6e4;
-    border-radius: 10px;
-    margin: 10px;
-    padding: 10px;
-    cursor: pointer;
-    font-size: 2.1rem;
-    font-weight: 400;
-  }
-  
-  .opcion:hover{
-       background: lightgray;
-  }
-  button{
-    font-family: 'Bevellier', sans-serif;
-    font-weight: 600;
-    font-size: 1.7rem;
-    align-items: center;
-	justify-content: center;
-	width: auto;
-	height: auto;
-	background: #141414;
-	color: #fff;
-	border: none;
-	cursor: pointer;
-	transition: .3s ease all;
-	border-radius: 5px;
-	position: relative;
-	overflow: hidden;
-  }
-  /*Estilo boton Ayuda */
-  .boton2{
-    padding: 5px;
-    background: none;
-    color:  #001858;
-    font-size: 2rem;
- }
- .boton2 svg{
-    width: 100%;
-    height: 100%;
+    background-position: center;
+}
+.overlay {
     position: absolute;
-    top: 0;
-    left: 0;
-    fill: none;
- }
-
- .boton2 rect{
+    top: 0; left: 0;
     width: 100%;
     height: 100%;
-    stroke: #001858;
-    stroke-width: 5px;
-    stroke-dasharray: 1000;
-    stroke-dashoffset: 1000;
-    transition: 1.5s ease all;
- }
+    background-color: rgba(0,0,0,0.3);
+}
+.logo {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+.logo img {
+    width: 220px;
+    max-width: 80%;
+}
+.names {
+    position: absolute;
+    bottom: 20%;
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: 1.3rem;
+    letter-spacing: 2px;
+}
 
- .boton2:hover rect{
-    stroke-dashoffset: 0;
- }
- .swal2-popup {
-    font-size: 1.8rem !important;
+/* ======== SECCIÓN INTRO ======== */
+.intro {
+    text-align: center;
+    padding: 30px 20px;
+    background-color: #e8ece6;
+}
+.intro p{
+    color: #384333;
+}
+.parents {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 0.9rem;
+    margin-top: 15px;
+    font-family: "Libertinus Serif", serif;
+}
+.parents > div:first-child {
+    position: relative;
+    padding-right: 45px;
+}
+
+.parents > div:first-child::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 44px;       
+    width: 2px;         
+    background-color: #333;
+}
+
+/* ======== SECCIÓN FECHA ======== */
+.date-section {
+    position: relative;
+    text-align: center;
+    background-color: #f4f1f7;
+    padding: 30px 20px;
+    border-top-left-radius: 45%;
+    border-top-right-radius: 45%;
+}
+.flower-icon {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 176px;
+    height: 35px;
+    background-image: url(/assets/icons/flor.png);
+    background-size: cover;
+}
+.date-title {
+    margin-top: 50px;
+    color: #888;
+    font-weight: bold;
+}
+.date {
+    font-size: 3.2rem;
+    font-family: "Libertinus Serif", serif;
+    font-weight: 600;
+    color: #c5aff8;
+    margin: 15px 0;
+}
+.events {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+.event {
+    text-align: center;
+    width: 45%;
+}
+.event img {
+    width: 75px;
+    margin-bottom: 8px;
+}
+.event-body{
+    margin-bottom: 10px;
+}
+.btn-map {
+    background-color: #b9c8b1;
+    color: white;
+    padding: 8px 40px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 0.8rem;
+}
+.event-subtitle{
+    font-size: 1.2rem;
+    font-family: "Libertinus Serif", serif;
+    font-weight: 600;
+    color: #c5aff8;
+}
+.date-footer p{
+    margin-top: 30px;
+    font-size: 1.2rem;
+    font-family: "Libertinus Serif", serif;
+    font-weight: 400;
+    color: #b9c8b1;
+
+}
+
+/* ======== SECCIÓN REGALOS ======== */
+.gifts {
+    background-color: #e4e1f4;
+    text-align: center;
+    padding: 30px 20px;
+}
+.gifts h3 {
+    font-size: 1.3rem;
+    font-family: "Libertinus Serif", serif;
+    color: #c3aef8;
+}
+.gifts p{
+    color: #a295ce;
+}
+.gift-logos {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 20px 0;
+}
+.gift-logos img {
+    height: 25px;
+}
+.btn-gift {
+    background-color: #a18bbf;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 0.8rem;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+/* ======== SECCIÓN CONFIRMAR ======== */
+.confirm-img-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    min-width: 307px;
+    height: 70vh;
+    background-image: url(assets/img/foto2.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+    padding: 30px 0px;
+}
+.confirm-text-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+.check{
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-image: url(assets/icons/icon-check.png);
+    background-size: cover;
+    margin-right: 10px;
+}
+.confirm-img-container h3{
+    padding-top: 0px;
+    font-family: "Libertinus Serif", serif;
+    font-size: 1.3rem;
+    font-weight: bold;
+    /* line-height: 2.6rem; */
+    color: #b6c6af;
+}
+.confirm-button-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 75%;
+}
+.btn-confirm{
+    background-color: #b9c8b1;
+    color: white;
+    padding: 8px 40px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 0.8rem;
+}
+
+/* ======== GALERÍA FINAL ======== */
+.gallery img {
+    width: 100%;
+    display: block;
+}
+@media screen and (min-width: 425px) {
+    .parents > div:first-child {
+    position: relative;
+    padding-right: 67px;
+}
     
-  }
+}
+@media screen and (min-width: 768px) {
+    .parents > div:first-child::after {
+    display: none;
+}
+    
+}

@@ -1,59 +1,104 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
-    <link rel="stylesheet" href="./phone.css" media="(max-width: 930px)">
-    <link href="https://api.fontshare.com/v2/css?f[]=bevellier@500,600,400&display=swap" rel="stylesheet">
-    <script src="base-de.preguntas.AD.js"></script>
-    <script defer src="act_AD.js" ></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.3.0/dist/sweetalert2.all.min.js"></script>
-    <title>Juego de preguntas</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libertinus+Serif:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap" rel="stylesheet">
+  <title>Invitación Boda</title>
 </head>
-<style>
-    *
-</style> 
-    <body>
-    <header>
-        <div class="titulo">
-            <h1>Sistemas Operativos</h1>
-             <h2>Por: Chirstopher Hernandez</h2>   
-        </div>    
-    </header>
-    <div id="tablero-de-juego">
+<body>
 
-        <div id="encabezado">
-
-            
-            <button id="ayuda" class="boton2" onclick="ayuda()">
-                <span>Ayuda</span>
-                    <svg>
-                    <rect x="0" y="0" fill="none"></rect>
-                        </svg>
-            </button>
-
-        <br>
-
-            <span id="pregunta">Aquí va la pregunta</span>
-        <br>
-
-            <img id="imagen" src="" style="width: 90%;height: 200px;object-fit: contain;">
-        </div>
-
-        <div class="opcion" id="opcion-1" onclick="seleccionarOpcion(0)">
-            Opción 1
-        </div>
-        <div class="opcion" id="opcion-2" onclick="seleccionarOpcion(1)">
-             Opción 2
-        </div>
-        <div class="opcion" id="opcion-3" onclick="seleccionarOpcion(2)">
-             Opción 3
-        </div>
-        <div class="opcion" id="opcion-4" onclick="seleccionarOpcion(3)">
-            Opción 4
-        </div>
-
+  <!-- HERO -->
+  <section class="hero">
+    <div class="overlay"></div>
+    <div class="logo">
+      <img src="assets/icons/logo.png" alt="Logo Novios">
     </div>
+    <div class="names">
+      ZULEMA VÁZQUEZ <br> & <br> YAJACIEL HERNÁNDEZ
+    </div>
+  </section>
+
+  <!-- INTRO -->
+  <section class="intro">
+    <p>Deseamos pasar el día más importante de nuestras vidas contigo, con la bendición de Dios y nuestros padres:</p>
+    <div class="parents">
+      <div>
+        Lucía Fajardo <br> Mario Vázquez
+      </div>
+      <div>
+        Sofía Sánchez <br> Luis Hernández
+      </div>
+    </div>
+  </section>
+
+  <!-- FECHA -->
+  <section class="date-section">
+    <span class="flower-icon"></span>
+    <div class="date-title">Esperamos contar con tu presencia el día: <br> <b>Sábado</b></b></div>
+    <div class="date">01 | NOV | 25</div>
+    <div class="events">
+      <div class="event">
+        <img src="assets/icons/icon-ceremonia.png" alt="Ceremonia">
+        <div class="event-subtitle">CEREMONIA</div>
+        <div><b>17:00 hrs</b></div>
+        <div class="event-body">Parroquia de Santiago Apóstol</div>
+        <a href="https://www.google.com/maps/place/Parroquia+de+Santiago+Ap%C3%B3stol/@20.6237742,-103.2438524,17z/data=!3m1!4b1!4m6!3m5!1s0x8428b4f4de2ff1cb:0xb49b36b5637b4cd0!8m2!3d20.6237742!4d-103.2412775!16s%2Fg%2F1tf7bdxr?entry=ttu&g_ep=EgoyMDI1MDgxMi4wIKXMDSoASAFQAw%3D%3D" class="btn-map">Ir al mapa</a>
+      </div>
+      <div class="event">
+        <img src="assets/icons/icon-recepcion.png" alt="Recepción">
+        <div class="event-subtitle">RECEPCIÓN</div>
+        <div><b>19:00 hrs</b></div>
+        <div class="event-body">Salón Quinta Real Las Palmas</div>
+        <a href="https://www.google.com/maps/place/quinta+real+las+palmas/@20.6204967,-103.2594202,17z/data=!3m1!4b1!4m6!3m5!1s0x8428b48675612f4d:0x73397037df19eaf0!8m2!3d20.6204967!4d-103.2568453!16s%2Fg%2F11c6qcy3k5?entry=ttu&g_ep=EgoyMDI1MDgxMi4wIKXMDSoASAFQAw%3D%3D" class="btn-map">Ir al mapa</a>
+      </div>
+    </div>
+      <div class="date-footer">
+      <p><b>CÓDIGO DE VESTIMENTA</b> <br> Riguroso Formal</p>
+      </div>
+  </section>
+
+  <!-- REGALOS -->
+  <section class="gifts"> 
+    <img src="assets/icons/icon-gift.png" alt="Regalos" style="width:75px;">
+    <h3>MESA DE REGALOS</h3>
+    <p>Tu presencia es lo más importante para nosotros, si deseas hacernos un obsequio, puedes consultar nuestras mesas de regalo:</p>
+    <div class="gift-logos">
+      <div>
+        <img src="assets/icons/logo-amazon.png" alt="Amazon">
+        <br>
+        <a href="#" class="btn-gift">Ver en línea</a>
+      </div>
+      <div>
+        <img src="assets/icons/logo-liverpool.png" alt="Liverpool">
+        <br>
+        <a href="#" class="btn-gift">Ver en línea</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONFIRMAR -->
+  <section class="confirm-img-container">
+    <div class="confirm-text-container">
+    <div><span class="check"></span></div>
+    <div><h3>CONFIRMAR <br>ASISTENCIA</h3></div>
+  </div>
+    <div class="confirm-button-container">
+    <p>Favor de confirmar su asistencia, con nombre y apellido, en el siguiente botón,<b> antes del día 20 de Septiembre.</b></p>
+    <a href="#" class="btn-confirm">Click para confirmar</a>
+    </div>
+  </section>
+
+  <!-- GALERÍA FINAL -->
+  <section class="gallery">
+    <img src="assets/img/foto3.png" alt="Foto pareja 2">
+  </section>
+
 </body>
 </html>
